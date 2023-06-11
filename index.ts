@@ -1,16 +1,16 @@
-import bsky from '@atproto/api';
-const { BskyAgent } = bsky;
-import * as dotenv from 'dotenv';
-import process from 'node:process';
-dotenv.config();
+import bsky from 'npm:@atproto/api';
+import { load } from "https://deno.land/std@0.191.0/dotenv/mod.ts";
 
+await load();
+
+const { BskyAgent } = bsky;
 const agent = new BskyAgent({
   service: 'https://bsky.social',
 });
 
 await agent.login({
-  identifier: process.env.BSKY_USERNAME!,
-  password: process.env.BSKY_PASSWORD!,
+  identifier: Deno.env.get("BSKY_USERNAME")!,
+  password: Deno.env.get("BSKY_PASSWORD")!,
 });
 
 const bleet = 'You can find the code for this bleet >>>here<<<, with a link card, a title and a description!';
