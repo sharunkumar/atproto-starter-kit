@@ -1,9 +1,18 @@
-# atproto starter kit
+# atproto starter kit for deno
 
-Use this as a template repo. Requires Node 18+ with typescript and ts-node installed globally (`npm i -g typescript ts-node`). Add your bluesky username and password to `.env` then run your app with `npm run start` or `ts-node-esm index.ts`.
+Use this as a template repo. Requires [Deno](https://deno.com/runtime). Add your
+bluesky username and password to `.env` then run your app with the following
+command
 
-I recommend using `eslint` (for linting) and `prettier` (for enforcing code style) in your chosen text editor (or from the command line).
+```sh
+deno run --allow-read --allow-net --allow-env .\index.ts
+```
 
-API documentation can be found here: [https://github.com/bluesky-social/atproto/tree/main/packages/api](https://github.com/bluesky-social/atproto/tree/main/packages/api)
+compile
 
-@ me on bluesky (@aliceisjustplaying.bsky.social, did:plc:by3jhwdqgbtrcc7q4tkkv3cf) if you've built something interesting with it!
+```sh
+deno compile --allow-read --allow-net --allow-env .\index.ts
+```
+
+API documentation can be found here:
+[https://github.com/bluesky-social/atproto/tree/main/packages/api](https://github.com/bluesky-social/atproto/tree/main/packages/api)
